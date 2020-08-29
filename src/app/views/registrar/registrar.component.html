@@ -1,0 +1,53 @@
+<div class="container-fluid" style="height: 89.5vh">
+  <div class="row justify-content-center mr-0 ml-0 h-100 pt-2 pb-2">
+    <div
+      class="col-12 col-sm-11 col-md-10 col-lg-9 col-xl-8 bg-white shadow align-self-center p-2"
+      style="border-radius: 8px"
+    >
+      <div class="row justify-content-center mr-0 ml-0 mt-2 mb-2">
+        <div class="col-7 col-sm-6 col-md-5 col-lg-4 col-xl-3">
+          <img class="w-100" src="assets/images/logo_usuario.png" alt="logo" />
+        </div>
+      </div>
+      <form nz-form [formGroup]="formularioRegistro">
+        <div class="row justify-content-center ml-0 mr-0">
+          <div class="col-md-6 mt-1 mb-1">
+            <nz-input-group class="w-100" nzAddOnBefore="Nombres">
+              <input type="text" nz-input formControlName="nombres" />
+            </nz-input-group>
+          </div>
+          <div class="col-md-6 mt-1 mb-1">
+            <nz-input-group class="w-100" nzAddOnBefore="Apellidos">
+              <input type="text" nz-input formControlName="apellidos" />
+            </nz-input-group>
+          </div>
+          <div class="col-md-6 mt-1 mb-1">
+            <nz-input-group class="w-100" nzAddOnBefore="Teléfono">
+              <input type="tel" nz-input formControlName="telefono" />
+            </nz-input-group>
+          </div>
+          <div class="col-md-6 mt-1 mb-1">
+            <nz-input-group class="w-100" nzAddOnBefore="Correo">
+              <input type="email" nz-input formControlName="correo" />
+            </nz-input-group>
+          </div>
+          <div class="col-md-6 mt-1 mb-1">
+            <nz-input-group class="w-100" nzAddOnBefore="Dirección">
+              <input type="email" nz-input formControlName="direccion" />
+            </nz-input-group>
+          </div>
+        </div>
+      </form>
+      <div class="row justify-content-center mr-0 ml-0 mt-2 mb-2">
+        <button
+          nz-button
+          nzType="primary"
+          (click)="guardarUsuario()"
+          [disabled]="formularioRegistro.invalid"
+        >
+          <i nz-icon nzType="save"></i>Crear usuario
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

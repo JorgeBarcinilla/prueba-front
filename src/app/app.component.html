@@ -1,4 +1,11 @@
-<!-- NG-ZORRO -->
-<a href="https://github.com/NG-ZORRO/ng-zorro-antd" target="_blank" style="display: flex;align-items: center;justify-content: center;height: 100%;width: 100%;">
-  <img height="300" src="https://img.alicdn.com/tfs/TB1X.qJJgHqK1RjSZFgXXa7JXXa-89-131.svg">
-</a>
+<nz-layout>
+  <nz-header class="shadow bg-light position-sticky" style="top: 0px">
+    <ul class="bg-transparent border-0" nz-menu nzMode="horizontal">
+      <li nz-menu-item>Crear usuario</li>
+      <li nz-menu-item>Administrar usuarios</li>
+    </ul>
+  </nz-header>
+  <nz-content>
+    <router-outlet></router-outlet>
+  </nz-content>
+</nz-layout>

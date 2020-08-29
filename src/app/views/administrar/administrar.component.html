@@ -1,0 +1,48 @@
+<div class="container-fluid" style="height: 89.5vh">
+  <div class="row justify-content-center mr-0 ml-0 h-100 pt-2 pb-2">
+    <div class="col-10 p-0">
+      <nz-table class="w-100" #basicTable [nzData]="usuarios">
+        <thead>
+          <tr>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Telefono</th>
+            <th>Correo</th>
+            <th>Dirección</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of basicTable.data">
+            <td>{{ data.nombres }}</td>
+            <td>{{ data.apellidos }}</td>
+            <td>{{ data.telefono }}</td>
+            <td>{{ data.correo }}</td>
+            <td>{{ data.direccion }}</td>
+            <td>
+              <div class="row justify-content-center mr-0 ml-0">
+                <button
+                  class="mr-1"
+                  nz-button
+                  nzType="primary"
+                  (click)="editarUsuario(data)"
+                >
+                  <i nz-icon nzType="edit"></i>Editar
+                </button>
+                <button
+                  class="ml-1"
+                  nz-button
+                  nzType="primary"
+                  (click)="eliminarUsuario(data.id)"
+                  nzDanger
+                >
+                  <i nz-icon nzType="delete"></i>Eliminar
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </nz-table>
+    </div>
+  </div>
+</div>
