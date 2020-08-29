@@ -1,8 +1,20 @@
 <nz-layout>
   <nz-header class="shadow bg-light position-sticky" style="top: 0px">
     <ul class="bg-transparent border-0" nz-menu nzMode="horizontal">
-      <li nz-menu-item>Crear usuario</li>
-      <li nz-menu-item>Administrar usuarios</li>
+      <li
+        nz-menu-item
+        [routerLink]="['/registrar']"
+        routerLinkActive="router-link-active"
+      >
+        Crear usuario
+      </li>
+      <li
+        nz-menu-item
+        [routerLink]="['/administrar']"
+        routerLinkActive="router-link-active"
+      >
+        Administrar usuarios
+      </li>
     </ul>
   </nz-header>
   <nz-content>
